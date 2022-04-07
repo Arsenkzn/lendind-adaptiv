@@ -10,6 +10,7 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 15px;
 }
 
 a {
@@ -91,6 +92,8 @@ li {
     border-top: none;
     box-shadow: 0px 5px 0px 0px rgba(42, 172, 200, 0.004);
     padding: 10px 5px;
+    z-index: 1;
+    /*показывает НАД слайдером */
 }
 
 .header__drop-down.drop-down {
@@ -206,21 +209,240 @@ h1{
     padding-top: 90px;
     text-align: left;
 }
-.slick-dots li.slick-active button{
-background-color: #fff;
+
+.slick-dots li.slick-active button {
+    background-color: #fff;
 }
+
 .slick-dots li button {
     height: 14px;
     width: 14px;
-    background-color: rgba(98,98,98,.5);    /*50% прозрачность это 5 */
-    border-radius: 50%;             /*закругление*/
+    background-color: rgba(98, 98, 98, .5);
+    /*50% прозрачность это 5 */
+    border-radius: 50%;
+    /*закругление*/
 }
 
 .slick-dots li button:before {
     display: none;
 }
-.slick-dots li{
+
+.slick-dots li {
     margin: 0 9px;
     height: auto;
     width: auto;
 }
+
+.items {
+    background-color: #e8ebf1;
+    padding: 60px 0 50px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.item__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: 225px;
+    font-family: 'arial', sans-serif;
+}
+
+.item__title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-left: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.item__icons {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.item__text {
+    font-style: 13px;
+    color: #363636;
+    margin-bottom: 25px;
+}
+
+.item__link {
+    padding-left: 15px;
+    font-style: 15px;
+    position: relative;
+    color: #2aacc8;
+}
+
+.item__link::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/rigth-arrow.png);
+    left: 0;
+    top: 0px;
+    width: 12px;
+    height: 15px;
+}
+
+.works__title,
+.testimonials__title,
+.clients-logo__title {
+    padding: 25px 0px 15px 40px;
+    position: relative;
+    font-family: 'arial', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.works__title::before,
+.testimonials__title::before,
+.clients-logo__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background-image: url(../images/goluboy_cursor.png);
+    height: 24px;
+    width: 14px;
+}
+
+.works__inner {
+    padding: 20px 0px 40px;
+    border-top: 1px;
+}
+
+.slick-arrow {
+    width: 20x;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #81e4ed;
+}
+
+.slick-arrow::before {
+    display: none;
+}
+
+.slick-arrow:hover,
+.slick-arrow:focus {
+    background-color: #81e4ed;
+}
+
+.slick-next {
+    right: 0;
+    top: -27px;
+}
+
+.slick-prev {
+    right: 31px;
+    top: -27px;
+    left: auto;
+}
+
+.works__inner-item {
+    text-align: center;
+}
+
+.works__inner-box {
+    display: inline-block;
+    position: relative;
+
+}
+
+.slick-list {
+    margin-left: 0px;
+    margin-right: -45px;
+}
+
+.clients {
+    padding: 0px 0px 40px;
+    font-family: 'arial', sans-serif;
+}
+
+.clients__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonials {
+    max-width: 440px;
+
+}
+
+.clients-logo {
+    max-width: 400px;
+
+}
+
+.testimonials p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #363636;
+}
+
+.testimonials span {
+    display: block;
+    padding-top: 30px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.testimonials__title::before {
+    background-image: url(../images/Сщщбщение\ значок.png);
+    width: 26px;
+    height: 22px;
+}
+
+.clients-logo__title::before {
+    background-image: url(../images/человечки.png);
+    width: 30px;
+    height: 20px;
+}
+
+.download {
+    margin-top: 40px;
+    padding: 30px 40px 30px 30px;
+    border: 1px solid #81e4ed;
+    background-color: #e8fcfe;
+    display: flex;
+    justify-content: space-between;
+}
+
+.download__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #363636;
+    max-width: 620px;
+}
+
+.download__btn a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px 20px 20px 70px;
+    position:relative;
+    border: 1px solid rgb(42, 172, 200);
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
+    background: linear-gradient( to top, rgb(42, 172, 200) 0%, rgb(96, 206, 222) 15%, rgb(114, 218, 230) 50%, rgb(129, 228, 237) 100%);
+}
+.download__btn a::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/загузка.png);
+    width: 28px;
+    height: 25px;
+    left: 19px;
+    top: 16px;
+}
+
+
+
+
